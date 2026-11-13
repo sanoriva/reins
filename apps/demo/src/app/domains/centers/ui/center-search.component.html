@@ -1,0 +1,8 @@
+<form (ngSubmit)="searched.emit(text.trim())">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Localidad, centro o servicio</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput name="q" [(ngModel)]="text" [ngModelOptions]="{ standalone: true }" />
+  </mat-form-field>
+  <button mat-flat-button type="submit">Buscar</button>
+</form>

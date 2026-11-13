@@ -1,0 +1,27 @@
+@if (session.patient(); as patient) {
+  <header class="greeting">
+    <h1>Hola, {{ patient.firstName }}</h1>
+    <p>{{ patient.center }} · tu médico es {{ patient.doctor }}</p>
+  </header>
+  <div class="grid">
+    <div class="main">
+      <vt-next-appointment [appointment]="appointments.next()" (seeAll)="go('/citas')" (book)="go('/citas/nueva')" />
+      <section aria-labelledby="hoy">
+        <h2 id="hoy">Hoy te toca</h2>
+        <vt-schedule-today [doses]="medication.today()" />
+      </section>
+    </div>
+    <aside class="side">
+      <section aria-labelledby="avisos">
+        <h2 id="avisos">Avisos</h2>
+        <vt-notice-list [notices]="notices.notices()" />
+      </section>
+      <section aria-labelledby="accesos">
+        <h2 id="accesos">Qué quieres hacer</h2>
+        <vt-quick-links [links]="links" (chosen)="go($event)" />
+      </section>
+    </aside>
+  </div>
+} @else {
+  <vt-welcome (signIn)="go('/entrar')" (findCenter)="go('/centros')" />
+}

@@ -1,0 +1,21 @@
+<vt-page-header title="Mis citas" lead="Tus próximas citas y las que ya has tenido.">
+  <a mat-flat-button routerLink="/citas/nueva"><mat-icon>add</mat-icon> Pedir cita</a>
+</vt-page-header>
+
+<section aria-labelledby="proximas">
+  <div class="bar">
+    <h2 id="proximas">Próximas</h2>
+    <mat-button-toggle-group [value]="store.order()" (change)="store.sortBy($event.value)" aria-label="Ordenar">
+      <mat-button-toggle value="date">Por fecha</mat-button-toggle>
+      <mat-button-toggle value="specialty">Por especialidad</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <vt-appointment-list [appointments]="store.upcoming()" emptyMessage="No tienes citas pendientes." />
+</section>
+
+<vt-cancellation />
+
+<section aria-labelledby="anteriores">
+  <h2 id="anteriores">Anteriores</h2>
+  <vt-appointment-list [appointments]="store.past()" emptyMessage="Aún no has tenido ninguna cita." />
+</section>

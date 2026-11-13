@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Qué puede hacer tu asistente · {{ page().title }}</h2>
+<mat-dialog-content>
+  <p class="intro">{{ page().intro }}</p>
+  @for (section of sections(); track section.title) {
+    <h3>{{ section.title }}</h3>
+    <mat-accordion>
+      @for (item of section.help.cases; track item.title) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ item.title }}</mat-panel-title>
+            <mat-panel-description>«{{ item.say }}»</mat-panel-description>
+          </mat-expansion-panel-header>
+          <p class="what">{{ item.what }}</p>
+          <p class="how">{{ item.how }}</p>
+          <div class="meta">
+            <code class="action">{{ item.action }}</code>
+            <span class="file">{{ item.file ?? section.help.file }}</span>
+          </div>
+          <pre><code>{{ item.code }}</code></pre>
+        </mat-expansion-panel>
+      }
+    </mat-accordion>
+  }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cerrar</button>
+</mat-dialog-actions>

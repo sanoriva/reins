@@ -1,0 +1,10 @@
+.private {
+  display: flex;
+  gap: var(--vt-space-2);
+  align-items: center;
+  padding: var(--vt-space-3) var(--vt-space-4);
+  border-radius: var(--vt-radius);
+  background: var(--vt-surface-2);
+  color: var(--vt-muted);
+  margin: 0 0 var(--vt-space-6);
+}

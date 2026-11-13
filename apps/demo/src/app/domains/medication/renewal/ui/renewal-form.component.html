@@ -1,0 +1,15 @@
+<form [formGroup]="form()" (ngSubmit)="submitted.emit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Medicamento</mat-label>
+    <mat-select formControlName="medicine">
+      @for (option of options(); track option) {
+        <mat-option [value]="option">{{ option }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Comentario para tu médico (opcional)</mat-label>
+    <input matInput formControlName="note" />
+  </mat-form-field>
+  <button mat-flat-button type="submit" [disabled]="form().invalid">Pedir la renovación</button>
+</form>

@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th>Medicamento</th>
+      <th>Para qué</th>
+      <th>Cuándo</th>
+      <th>Hasta</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (p of prescriptions(); track p.id) {
+      <tr>
+        <td>
+          <strong>{{ p.medicine }}</strong
+          ><br /><span class="muted">{{ p.dose }}</span>
+        </td>
+        <td>{{ p.purpose }}</td>
+        <td class="num">{{ p.times.length ? p.times.join(' · ') : 'Si hace falta' }}</td>
+        <td>
+          {{ p.until | longDate: 'date' }}
+          @if (p.renewalRequested) {
+            <span class="tag ok">Renovación pedida</span>
+          } @else if (p.needsRenewal) {
+            <span class="tag warn">Quedan {{ p.daysLeft }} días</span>
+          }
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

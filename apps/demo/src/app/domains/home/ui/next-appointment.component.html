@@ -1,0 +1,17 @@
+<section class="next" aria-labelledby="proxima">
+  <h2 id="proxima">Tu próxima cita</h2>
+  @if (appointment(); as a) {
+    <p class="when">
+      <span class="day">{{ a.start | longDate }}</span
+      ><span>{{ a.start | longDate: 'time' }}</span>
+    </p>
+    <p class="who">
+      <strong>{{ a.specialty }}</strong> con {{ a.doctor }}
+    </p>
+    <p class="where">{{ a.center }} · {{ a.reason }}</p>
+    <button mat-stroked-button (click)="seeAll.emit()">Ver todas mis citas</button>
+  } @else {
+    <p class="who">No tienes citas pendientes.</p>
+    <button mat-flat-button (click)="book.emit()">Pedir cita</button>
+  }
+</section>

@@ -1,0 +1,5 @@
+<mat-chip-listbox aria-label="Especialidad" [value]="selected()" (change)="picked.emit($event.value)">
+  @for (s of specialties(); track s.slug) {
+    <mat-chip-option [value]="s.slug">{{ s.name }}</mat-chip-option>
+  }
+</mat-chip-listbox>

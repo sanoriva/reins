@@ -1,0 +1,12 @@
+<vt-assistant-welcome [name]="firstName()" [compact]="newestFirst().length > 0" />
+<div class="panels">
+  @for (panel of newestFirst(); track panel.key) {
+    <vt-panel-frame [label]="panel.title ?? panel.key" (closed)="close(panel.key)" animate.enter="panel-in" animate.leave="panel-out">
+      @if (panel.component; as component) {
+        <ng-container *ngComponentOutlet="component; inputs: panel.params; injector: panelInjector" />
+      } @else {
+        <p class="loading">Abriendo…</p>
+      }
+    </vt-panel-frame>
+  }
+</div>

@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vt-space-8);
+}
+vt-page-header a {
+  margin-top: var(--vt-space-4);
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--vt-space-4);
+  flex-wrap: wrap;
+}
+h2 {
+  font-size: var(--vt-text-xl);
+  margin: 0 0 var(--vt-space-3);
+}

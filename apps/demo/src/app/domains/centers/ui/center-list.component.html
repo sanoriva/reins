@@ -1,0 +1,20 @@
+@if (centers().length) {
+  <ul>
+    @for (c of centers(); track c.id) {
+      <li>
+        <button
+          type="button"
+          [class.selected]="c.id === selectedId()"
+          [attr.aria-pressed]="c.id === selectedId()"
+          (click)="selected.emit(c.id)"
+        >
+          <strong>{{ c.name }}</strong>
+          <span>{{ c.kind }} · {{ c.address }}, {{ c.town }}</span>
+          <span class="phone">{{ c.phone }}</span>
+        </button>
+      </li>
+    }
+  </ul>
+} @else {
+  <vt-empty-state message="No hay centros que coincidan. Prueba con otra localidad." icon="location_off" />
+}

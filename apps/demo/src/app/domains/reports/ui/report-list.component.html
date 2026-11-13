@@ -1,0 +1,19 @@
+@if (reports().length) {
+  <ul>
+    @for (r of reports(); track r.id) {
+      <li>
+        <button type="button" (click)="opened.emit(r.id)">
+          <span class="kind">{{ r.kindLabel }}</span>
+          <span class="body">
+            <strong>{{ r.title }}</strong>
+            <span>{{ r.summary }}</span>
+            <small>{{ r.date | longDate: 'date' }} · {{ r.doctor }}</small>
+          </span>
+          <mat-icon aria-hidden="true">chevron_right</mat-icon>
+        </button>
+      </li>
+    }
+  </ul>
+} @else {
+  <vt-empty-state message="No hay informes de este tipo." icon="description" />
+}

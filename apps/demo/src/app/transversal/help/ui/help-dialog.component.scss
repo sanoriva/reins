@@ -1,0 +1,52 @@
+.intro {
+  font-size: var(--vt-text-lg);
+  color: var(--vt-muted);
+  margin: 0 0 var(--vt-space-2);
+}
+h3 {
+  font-size: var(--vt-text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: var(--vt-space-6) 0 var(--vt-space-2);
+  color: var(--vt-accent-ink);
+}
+mat-panel-description {
+  justify-content: flex-end;
+  text-align: right;
+}
+.what {
+  margin: 0 0 var(--vt-space-2);
+}
+.how {
+  color: var(--vt-muted);
+  margin: 0 0 var(--vt-space-3);
+}
+.meta {
+  display: flex;
+  gap: var(--vt-space-3);
+  align-items: center;
+  margin-bottom: var(--vt-space-2);
+  flex-wrap: wrap;
+}
+.action {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--vt-accent-soft);
+  color: var(--vt-accent-ink);
+  font-size: var(--vt-text-sm);
+}
+.file {
+  font-size: var(--vt-text-sm);
+  color: var(--vt-muted);
+}
+pre {
+  margin: 0;
+  padding: var(--vt-space-3) var(--vt-space-4);
+  overflow: auto;
+  border-radius: var(--vt-radius);
+  background: var(--vt-code-bg);
+  color: var(--vt-code-ink);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}

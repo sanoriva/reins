@@ -1,0 +1,6 @@
+<h2 mat-dialog-title>Conecta tu asistente</h2>
+<mat-dialog-content class="content">
+  <p>Dile a tu IA este código para que pueda ayudarte en Vitalia:</p>
+  <p class="code" [attr.aria-label]="'Código ' + spoken()">{{ code() }}</p>
+  <p class="hint">Cambia cada 2 minutos. Nadie más lo ve.</p>
+</mat-dialog-content>

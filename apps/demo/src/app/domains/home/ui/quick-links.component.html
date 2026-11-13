@@ -1,0 +1,14 @@
+<ul>
+  @for (link of links(); track link.id) {
+    <li>
+      <button type="button" (click)="chosen.emit(link.id)">
+        <mat-icon aria-hidden="true">{{ link.icon }}</mat-icon>
+        <span
+          ><strong>{{ link.label }}</strong
+          ><small>{{ link.hint }}</small></span
+        >
+        <mat-icon class="go" aria-hidden="true">chevron_right</mat-icon>
+      </button>
+    </li>
+  }
+</ul>

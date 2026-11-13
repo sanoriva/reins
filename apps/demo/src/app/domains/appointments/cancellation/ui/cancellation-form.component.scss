@@ -1,0 +1,9 @@
+form {
+  display: flex;
+  gap: var(--vt-space-3);
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+mat-form-field {
+  flex: 1 1 26rem;
+}

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  transition: padding 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  padding: var(--vt-space-10) 0 var(--vt-space-6);
+}
+:host(.compact) {
+  padding: 0 0 var(--vt-space-2);
+}
+h1 {
+  font: 700 var(--vt-text-display) / 1.05 var(--vt-font);
+  letter-spacing: -0.03em;
+  margin: 0;
+  transition: font-size 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+:host(.compact) h1 {
+  font-size: var(--vt-text-xl);
+}
+p {
+  font-size: var(--vt-text-lg);
+  color: var(--vt-muted);
+  margin: var(--vt-space-4) 0 0;
+  max-width: 46ch;
+}

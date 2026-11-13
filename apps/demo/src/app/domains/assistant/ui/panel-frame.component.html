@@ -1,0 +1,7 @@
+<div class="bar">
+  <span class="label">{{ label() }}</span>
+  <button mat-icon-button type="button" [attr.aria-label]="'Cerrar ' + label()" (click)="closed.emit()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<ng-content />

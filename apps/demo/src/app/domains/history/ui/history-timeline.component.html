@@ -1,0 +1,9 @@
+<ol>
+  @for (e of episodes(); track e.date.getTime()) {
+    <li>
+      <time>{{ e.date | longDate: 'date' }}</time>
+      <strong>{{ e.title }}</strong>
+      <span>{{ e.detail }}</span>
+    </li>
+  }
+</ol>

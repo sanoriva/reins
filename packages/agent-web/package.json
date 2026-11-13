@@ -1,0 +1,35 @@
+{
+  "name": "@reins-ai/web",
+  "version": "0.1.2",
+  "description": "Framework-agnostic browser core that lets the user's AI read, navigate and fill in forms on a website.",
+  "license": "MIT",
+  "author": "Sanoriva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanoriva/reins.git",
+    "directory": "packages/agent-web"
+  },
+  "homepage": "https://github.com/sanoriva/reins/tree/main/packages/agent-web#readme",
+  "bugs": {
+    "url": "https://github.com/sanoriva/reins/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test \"__tests__/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@reins-ai/contract": "0.1.2",
+    "zod": "^4.3.6"
+  }
+}

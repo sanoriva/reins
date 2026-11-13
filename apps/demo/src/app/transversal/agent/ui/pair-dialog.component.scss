@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--vt-space-3);
+}
+p {
+  margin: 0;
+  font-size: var(--vt-text-lg);
+}
+.code {
+  font: 700 3.25rem / 1 var(--vt-font);
+  letter-spacing: 0.28em;
+  margin: var(--vt-space-3) 0 var(--vt-space-3) 0.28em;
+  color: var(--vt-accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.hint {
+  font-size: var(--vt-text-sm);
+  color: var(--vt-muted);
+}

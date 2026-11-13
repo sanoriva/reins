@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  padding: var(--vt-space-4) var(--vt-space-6) var(--vt-space-6);
+  border: 1px solid var(--vt-line);
+  border-radius: var(--vt-radius-lg);
+  background: var(--vt-surface);
+  box-shadow: 0 18px 40px -28px color-mix(in oklab, var(--vt-ink) 45%, transparent);
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 calc(-1 * var(--vt-space-3)) var(--vt-space-2) 0;
+}
+.label {
+  font-size: var(--vt-text-sm);
+  font-weight: 700;
+  color: var(--vt-accent-ink);
+}

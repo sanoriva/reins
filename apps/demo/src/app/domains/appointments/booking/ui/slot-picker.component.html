@@ -1,0 +1,21 @@
+<div class="slots" data-agent-scroll="huecos" aria-label="Huecos libres">
+  @for (group of days(); track group.key) {
+    <h3>{{ group.date | longDate }}</h3>
+    <div class="row">
+      @for (slot of group.slots; track slot.id) {
+        <button
+          type="button"
+          class="slot"
+          [class.selected]="slot.label === selected()"
+          [attr.aria-pressed]="slot.label === selected()"
+          (click)="picked.emit(slot.label)"
+        >
+          <span class="time">{{ slot.start | longDate: 'time' }}</span>
+          <span class="doctor">{{ slot.doctor }}</span>
+        </button>
+      }
+    </div>
+  } @empty {
+    <vt-empty-state message="Elige una especialidad para ver los huecos libres." icon="event" />
+  }
+</div>

@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Confirma antes de enviar</h2>
+<mat-dialog-content class="content">
+  <p>Tu asistente quiere enviar esto:</p>
+  <dl>
+    @for (line of pending().summary; track line.label) {
+      <dt>{{ line.label }}</dt>
+      <dd>{{ line.value }}</dd>
+    }
+  </dl>
+  <p>Si está bien, dile este código:</p>
+  <p class="code" [attr.aria-label]="'Código ' + spoken()">{{ pending().code }}</p>
+  <p class="hint">
+    Caduca en {{ secondsLeft() }} s · te quedan {{ pending().attemptsLeft }} intentos · si no quieres enviarlo, no digas nada
+  </p>
+</mat-dialog-content>

@@ -1,0 +1,11 @@
+<ul>
+  @for (n of notices(); track n.id) {
+    <li [class.important]="n.important">
+      <mat-icon aria-hidden="true">{{ n.important ? 'error' : 'campaign' }}</mat-icon>
+      <div>
+        <strong>{{ n.title }}</strong>
+        <p>{{ n.body }}</p>
+      </div>
+    </li>
+  }
+</ul>

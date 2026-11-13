@@ -1,0 +1,27 @@
+<vt-page-header title="Pedir cita" lead="Elige la especialidad y un hueco libre. Puedes pedírselo a tu asistente." />
+
+<section aria-labelledby="especialidad">
+  <h2 id="especialidad">Especialidad</h2>
+  <vt-specialty-picker [specialties]="store.specialties()" [selected]="specialty()" (picked)="chooseSpecialty($event)" />
+</section>
+
+@if (booked(); as done) {
+  <section class="done" aria-live="polite">
+    <h2>Cita reservada</h2>
+    <p>{{ done.label }}</p>
+    <a mat-stroked-button routerLink="/citas">Ver mis citas</a>
+  </section>
+}
+
+@if (specialty()) {
+  <div class="pick">
+    <section aria-labelledby="huecos">
+      <h2 id="huecos">Huecos libres</h2>
+      <vt-slot-picker [slots]="store.slots()" [selected]="form.value.slot ?? null" (picked)="form.patchValue({ slot: $event })" />
+    </section>
+    <section aria-labelledby="reserva">
+      <h2 id="reserva">Tu reserva</h2>
+      <vt-booking-form [form]="form" (submitted)="bookByHand()" />
+    </section>
+  </div>
+}

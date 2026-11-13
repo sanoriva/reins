@@ -1,0 +1,44 @@
+.next {
+  padding: var(--vt-space-6);
+  border-radius: var(--vt-radius-lg);
+  background: var(--vt-accent);
+  color: var(--vt-on-accent);
+  box-shadow: 0 12px 32px -16px color-mix(in oklab, var(--vt-accent) 70%, transparent);
+}
+h2 {
+  font-size: var(--vt-text-md);
+  font-weight: 700;
+  margin: 0 0 var(--vt-space-4);
+  opacity: 0.9;
+}
+.when {
+  font: 700 var(--vt-text-2xl) / 1.1 var(--vt-font);
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--vt-space-4);
+  flex-wrap: wrap;
+}
+.day {
+  display: inline-block;
+}
+.day::first-letter {
+  text-transform: uppercase;
+}
+.when span:last-child {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+.who {
+  font-size: var(--vt-text-lg);
+  margin: var(--vt-space-3) 0 0;
+}
+.where {
+  margin: var(--vt-space-1) 0 var(--vt-space-5);
+  opacity: 0.85;
+}
+button {
+  --mdc-outlined-button-outline-color: color-mix(in oklab, var(--vt-on-accent) 60%, transparent);
+  --mat-button-outlined-label-text-color: var(--vt-on-accent);
+  --mat-button-outlined-outline-color: color-mix(in oklab, var(--vt-on-accent) 60%, transparent);
+}

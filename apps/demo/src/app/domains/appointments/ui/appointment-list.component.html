@@ -1,0 +1,20 @@
+@if (appointments().length) {
+  <ol>
+    @for (a of appointments(); track a.id) {
+      <li [class.muted]="a.status !== 'confirmada'">
+        <time class="date" [attr.datetime]="a.start.toISOString()">
+          <span class="d">{{ a.start.getDate() }}</span>
+          <span class="m">{{ a.start | longDate: 'month' }}</span>
+        </time>
+        <div class="what">
+          <strong>{{ a.specialty }}</strong>
+          <span>{{ a.start | longDate: 'full' }} · {{ a.doctor }}</span>
+          <span class="where">{{ a.center }} · {{ a.reason }}</span>
+        </div>
+        <span class="status" [attr.data-status]="a.status">{{ a.status }}</span>
+      </li>
+    }
+  </ol>
+} @else {
+  <vt-empty-state [message]="emptyMessage()" icon="event_available" />
+}

@@ -1,0 +1,47 @@
+@if (assistantMode()) {
+  <!-- Assistant page: no header or menu, only the assistant status and a way back, in a corner. -->
+  <div class="corner">
+    <vt-agent-indicator />
+    <a mat-stroked-button routerLink="/"><mat-icon>grid_view</mat-icon> Ver el portal</a>
+  </div>
+} @else {
+  <header class="bar">
+    <a class="brand" routerLink="/" aria-label="Vitalia, inicio">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9" />
+        <path d="M6 17h5l2.5-6 5 11 2.5-5H26" />
+      </svg>
+      <span>Vitalia</span>
+    </a>
+    <span class="spacer"></span>
+    <vt-agent-indicator />
+    @if (session.patient(); as patient) {
+      <span class="who">
+        <mat-icon aria-hidden="true">account_circle</mat-icon>
+        {{ patient.name }}
+      </span>
+      <button mat-button (click)="signOut()">Salir</button>
+    } @else {
+      <a mat-flat-button routerLink="/entrar">Entrar</a>
+    }
+  </header>
+}
+
+<div class="body" [class.focus]="assistantMode()">
+  @if (!assistantMode()) {
+    <nav aria-label="Menú">
+      @for (item of nav(); track item.path) {
+        <a [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <mat-icon aria-hidden="true">{{ item.icon }}</mat-icon>
+          {{ item.label }}
+        </a>
+      }
+    </nav>
+  }
+  <main>
+    <router-outlet />
+  </main>
+</div>
+
+<vt-agent-shell />
+<vt-help />

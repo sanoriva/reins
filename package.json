@@ -1,0 +1,34 @@
+{
+  "name": "reins",
+  "private": true,
+  "workspaces": [
+    "packages/agent-contract",
+    "packages/agent-web",
+    "packages/agent-angular",
+    "packages/agent-bridge",
+    "packages/agent-voice",
+    "apps/demo",
+    "apps/demo-api"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:libs": "npm run build -w @reins-ai/contract -w @reins-ai/web -w @reins-ai/angular -w @reins-ai/bridge -w @reins-ai/voice",
+    "bridge": "npm start -w @reins-ai/bridge -- --allow-origin http://localhost:4200",
+    "demo": "npm start -w demo",
+    "demo:api": "npm run dev -w demo-api",
+    "voice": "npm start -w @reins-ai/voice -- --language es",
+    "setup": "node scripts/setup.mjs",
+    "start:all": "node scripts/start-all.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "ng-packagr": "^21.2.3",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "sharp": {
+      "semver": "7.7.4"
+    }
+  }
+}

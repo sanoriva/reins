@@ -1,0 +1,12 @@
+<vt-page-header title="Medicación" lead="Qué te toca tomar hoy y tus tratamientos." />
+<div class="grid">
+  <section aria-labelledby="hoy">
+    <h2 id="hoy">Hoy</h2>
+    <vt-schedule-today [doses]="store.today()" />
+  </section>
+  <section aria-labelledby="tratamientos">
+    <h2 id="tratamientos">Tus tratamientos</h2>
+    <vt-prescription-list [prescriptions]="store.prescriptions()" />
+  </section>
+</div>
+<vt-renewal />

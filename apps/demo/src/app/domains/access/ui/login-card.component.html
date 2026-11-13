@@ -1,0 +1,11 @@
+<ul>
+  @for (p of patients(); track p.id) {
+    <li>
+      <div>
+        <strong>{{ p.name }}</strong>
+        <span>{{ p.age }} años · paciente de demostración</span>
+      </div>
+      <button mat-flat-button (click)="signIn.emit(p.id)">Entrar como {{ p.name.split(' ')[0] }}</button>
+    </li>
+  }
+</ul>

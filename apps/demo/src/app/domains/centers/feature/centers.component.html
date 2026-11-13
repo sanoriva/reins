@@ -1,0 +1,8 @@
+<vt-page-header title="Centros de salud" lead="Busca tu centro, sus horarios y qué servicios tiene." />
+<vt-center-search [query]="query()" (searched)="search($event)" />
+<div class="grid">
+  <vt-center-list [centers]="store.centers()" [selectedId]="store.selected()?.id ?? null" (selected)="store.select($event)" />
+  @if (store.selected(); as center) {
+    <vt-center-hours [center]="center" />
+  }
+</div>

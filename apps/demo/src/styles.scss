@@ -1,0 +1,100 @@
+@use '@angular/material' as mat;
+
+html {
+  color-scheme: light;
+  font-size: 106.25%;
+  @include mat.theme((
+    color: (theme-type: light, primary: mat.$cyan-palette, tertiary: mat.$orange-palette),
+    typography: 'Atkinson Hyperlegible Next',
+    density: 0,
+  ));
+
+  --vt-font: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
+  --vt-text-sm: 0.875rem;
+  --vt-text-md: 1rem;
+  --vt-text-lg: 1.125rem;
+  --vt-text-xl: 1.375rem;
+  --vt-text-2xl: 2rem;
+  --vt-text-display: 3.25rem;
+
+  --vt-space-1: 0.25rem;
+  --vt-space-2: 0.5rem;
+  --vt-space-3: 0.75rem;
+  --vt-space-4: 1rem;
+  --vt-space-5: 1.25rem;
+  --vt-space-6: 1.5rem;
+  --vt-space-8: 2.5rem;
+  --vt-space-10: 4rem;
+  --vt-radius: 12px;
+  --vt-radius-lg: 18px;
+  --vt-header: 4.5rem;
+
+  --vt-bg: #f4f7f6;
+  --vt-surface: #ffffff;
+  --vt-surface-2: #eaf1ef;
+  --vt-line: #d3dfdc;
+  --vt-ink: #12211f;
+  --vt-muted: #4a5f5b;
+  --vt-accent: #0b6e69;
+  --vt-on-accent: #ffffff;
+  --vt-accent-ink: #08524e;
+  --vt-accent-soft: #d9eeea;
+  --vt-warn: #8a4600;
+  --vt-warn-soft: #fbecd7;
+  --vt-danger: #a3262a;
+  --vt-danger-soft: #fbe3e3;
+  --vt-code-bg: #0f1f1d;
+  --vt-code-ink: #d6ebe6;
+
+  --mat-sys-primary: var(--vt-accent);
+  --mat-sys-on-primary: var(--vt-on-accent);
+  --mat-sys-primary-container: var(--vt-accent-soft);
+  --mat-sys-on-primary-container: var(--vt-accent-ink);
+  --mat-sys-secondary-container: var(--vt-accent-soft);
+  --mat-sys-on-secondary-container: var(--vt-accent-ink);
+  --mat-sys-surface: var(--vt-surface);
+  --mat-sys-on-surface: var(--vt-ink);
+  --mat-sys-on-surface-variant: var(--vt-muted);
+  --mat-sys-outline: #8aa19c;
+  --mat-sys-outline-variant: var(--vt-line);
+  --mat-sys-surface-container: var(--vt-surface);
+  --mat-sys-surface-container-high: var(--vt-surface);
+  --mat-sys-surface-container-highest: var(--vt-surface-2);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 400 var(--vt-text-md) / 1.5 var(--vt-font);
+  background: var(--vt-bg);
+  color: var(--vt-ink);
+  caret-color: var(--vt-accent);
+  scrollbar-color: #aabbb7 transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--vt-accent-soft);
+  color: var(--vt-accent-ink);
+}
+
+a {
+  color: var(--vt-accent-ink);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--vt-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/** What the AI is reading (the highlight action of @reins-ai/web). */
+::highlight(sanoriva) {
+  background-color: #ffe08a;
+  color: var(--vt-ink);
+}
+
+.mat-mdc-dialog-surface {
+  border-radius: var(--vt-radius-lg) !important;
+}

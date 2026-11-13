@@ -1,0 +1,15 @@
+@if (doses().length) {
+  <ol>
+    @for (d of doses(); track d.time + d.medicine) {
+      <li>
+        <time>{{ d.time }}</time>
+        <div>
+          <strong>{{ d.medicine }}</strong>
+          <span>{{ d.dose }} · {{ d.purpose }}</span>
+        </div>
+      </li>
+    }
+  </ol>
+} @else {
+  <vt-empty-state message="Hoy no tienes tomas a horas fijas." icon="medication" />
+}

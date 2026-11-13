@@ -1,0 +1,20 @@
+@if (!inPanel) {
+  <a mat-button routerLink="/informes"><mat-icon>arrow_back</mat-icon> Mis informes</a>
+}
+@if (store.current(); as report) {
+  <div class="layout">
+    <article agentContent="report">
+      <h1>{{ report.title }}</h1>
+      <p class="meta">{{ report.kindLabel }} · {{ report.date | longDate: 'date' }} · {{ report.doctor }}</p>
+      <vt-report-body [html]="report.html" />
+    </article>
+    <aside>
+      <vt-glossary [terms]="report.glossary" />
+      @if (report.previous.length) {
+        <vt-previous-tests [tests]="report.previous" />
+      }
+    </aside>
+  </div>
+} @else if (store.missing()) {
+  <h1>Este informe no existe</h1>
+}

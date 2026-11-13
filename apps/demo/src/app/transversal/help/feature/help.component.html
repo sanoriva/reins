@@ -1,0 +1,6 @@
+@if (help(); as page) {
+  <vt-help-fab (opened)="open()" />
+  <ng-template #dialog>
+    <vt-help-dialog [page]="page" [common]="common" />
+  </ng-template>
+}

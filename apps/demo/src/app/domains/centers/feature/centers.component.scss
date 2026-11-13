@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vt-space-6);
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--vt-space-6);
+  align-items: start;
+}
+vt-center-hours {
+  position: sticky;
+  top: calc(var(--vt-header) + var(--vt-space-4));
+}
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  vt-center-hours {
+    position: static;
+  }
+}

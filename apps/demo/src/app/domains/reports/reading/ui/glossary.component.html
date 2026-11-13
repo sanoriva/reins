@@ -1,0 +1,9 @@
+<div class="box" data-agent-scroll="glosario" aria-label="Glosario">
+  <h2>Qué significa</h2>
+  <dl>
+    @for (t of terms(); track t.term) {
+      <dt>{{ t.term }}</dt>
+      <dd>{{ t.meaning }}</dd>
+    }
+  </dl>
+</div>

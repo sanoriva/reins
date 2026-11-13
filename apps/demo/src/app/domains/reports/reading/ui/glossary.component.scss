@@ -1,0 +1,23 @@
+.box {
+  max-height: 20rem;
+  overflow: auto;
+  padding: var(--vt-space-5);
+  border-radius: var(--vt-radius-lg);
+  background: var(--vt-accent-soft);
+}
+h2 {
+  font-size: var(--vt-text-lg);
+  margin: 0 0 var(--vt-space-3);
+  color: var(--vt-accent-ink);
+}
+dl {
+  margin: 0;
+}
+dt {
+  font-weight: 700;
+  margin-top: var(--vt-space-3);
+}
+dd {
+  margin: 2px 0 0;
+  line-height: 1.5;
+}

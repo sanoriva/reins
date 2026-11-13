@@ -1,0 +1,25 @@
+<section class="hero">
+  <h1>Tu salud, también hablando.</h1>
+  <p class="lead">
+    Pide cita, consulta tus informes y tu medicación. Si te cuesta la pantalla, díselo a tu asistente: él lo hace por ti, y nada se envía
+    sin que tú lo confirmes.
+  </p>
+  <div class="actions">
+    <button mat-flat-button (click)="signIn.emit()"><mat-icon>login</mat-icon> Entrar en Vitalia</button>
+    <button mat-stroked-button (click)="findCenter.emit()"><mat-icon>location_on</mat-icon> Buscar un centro de salud</button>
+  </div>
+</section>
+<ol class="steps" aria-label="Cómo funciona">
+  <li>
+    <strong>Conecta tu asistente</strong>
+    <span>Vitalia te enseña un código de seis dígitos. Se lo dices a tu IA y listo.</span>
+  </li>
+  <li>
+    <strong>Pídele lo que necesites</strong>
+    <span>«Pídeme cita con dermatología», «¿qué me dijo el cardiólogo?», «¿qué pastilla me toca?».</span>
+  </li>
+  <li>
+    <strong>Tú decides qué se envía</strong>
+    <span>Antes de reservar o anular, aparece un código en pantalla. Solo si lo dices, se hace.</span>
+  </li>
+</ol>

@@ -1,0 +1,37 @@
+{
+  "name": "@reins-ai/bridge",
+  "version": "0.1.2",
+  "description": "Local bridge between the user's AI (MCP) and browser pages (WebSocket).",
+  "license": "MIT",
+  "author": "Sanoriva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanoriva/reins.git",
+    "directory": "packages/agent-bridge"
+  },
+  "homepage": "https://github.com/sanoriva/reins/tree/main/packages/agent-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/sanoriva/reins/issues"
+  },
+  "type": "module",
+  "bin": {
+    "agent-bridge": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "dev": "tsx watch src/cli.ts",
+    "test": "node --import tsx --test \"__tests__/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@reins-ai/contract": "0.1.2",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1"
+  }
+}

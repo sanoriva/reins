@@ -1,0 +1,26 @@
+.box {
+  max-height: 11rem;
+  overflow: auto;
+  padding: var(--vt-space-4) var(--vt-space-5);
+  border: 1px solid var(--vt-line);
+  border-radius: var(--vt-radius-lg);
+}
+h2 {
+  font-size: var(--vt-text-md);
+  margin: 0 0 var(--vt-space-2);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  padding: var(--vt-space-2) 0;
+  border-bottom: 1px solid var(--vt-line);
+}
+time {
+  font-size: var(--vt-text-sm);
+  color: var(--vt-muted);
+}

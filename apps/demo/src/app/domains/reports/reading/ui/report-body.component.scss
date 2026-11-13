@@ -1,0 +1,33 @@
+vt-report-body .report {
+  font-size: var(--vt-text-lg);
+  line-height: 1.7;
+  max-width: 68ch;
+}
+vt-report-body h2 {
+  font-size: var(--vt-text-xl);
+  margin: var(--vt-space-8) 0 var(--vt-space-2);
+}
+vt-report-body p {
+  margin: 0 0 var(--vt-space-4);
+}
+vt-report-body ul {
+  margin: 0 0 var(--vt-space-4);
+  padding-left: 1.3rem;
+}
+vt-report-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  margin: var(--vt-space-2) 0 var(--vt-space-4);
+}
+vt-report-body th {
+  text-align: left;
+  font-size: var(--vt-text-sm);
+  color: var(--vt-muted);
+  border-bottom: 1px solid var(--vt-line);
+  padding: var(--vt-space-2) var(--vt-space-3) var(--vt-space-2) 0;
+}
+vt-report-body td {
+  border-bottom: 1px solid var(--vt-line);
+  padding: var(--vt-space-2) var(--vt-space-3) var(--vt-space-2) 0;
+}

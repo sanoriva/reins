@@ -1,0 +1,33 @@
+{
+  "name": "@reins-ai/voice",
+  "version": "0.1.2",
+  "description": "Local voice for the user's AI: an MCP server with listen (microphone + Whisper) and speak (Piper), in any language.",
+  "license": "MIT",
+  "author": "Sanoriva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanoriva/reins.git",
+    "directory": "packages/agent-voice"
+  },
+  "homepage": "https://github.com/sanoriva/reins/tree/main/packages/agent-voice#readme",
+  "bugs": {
+    "url": "https://github.com/sanoriva/reins/issues"
+  },
+  "type": "module",
+  "bin": {
+    "agent-voice": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "test": "node --import tsx --test \"__tests__/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "onnxruntime-node": "1.30.0"
+  }
+}

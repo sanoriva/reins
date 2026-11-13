@@ -1,0 +1,170 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  height: var(--vt-header);
+  display: flex;
+  align-items: center;
+  gap: var(--vt-space-4);
+  padding: 0 var(--vt-space-6);
+  background: color-mix(in oklab, var(--vt-surface) 92%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--vt-line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--vt-space-3);
+  color: var(--vt-ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--vt-text-xl);
+  letter-spacing: -0.01em;
+}
+
+.mark {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.mark rect {
+  fill: var(--vt-accent);
+}
+
+.mark path {
+  fill: none;
+  stroke: var(--vt-on-accent);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.who {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--vt-space-2);
+  font-weight: 700;
+}
+
+.who mat-icon {
+  color: var(--vt-muted);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 15.5rem minmax(0, 1fr);
+}
+
+nav {
+  position: sticky;
+  top: var(--vt-header);
+  align-self: start;
+  height: calc(100vh - var(--vt-header));
+  display: flex;
+  flex-direction: column;
+  gap: var(--vt-space-1);
+  padding: var(--vt-space-6) var(--vt-space-4);
+  border-right: 1px solid var(--vt-line);
+  box-sizing: border-box;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: var(--vt-space-3);
+  padding: var(--vt-space-3) var(--vt-space-4);
+  border-radius: var(--vt-radius);
+  color: var(--vt-ink);
+  text-decoration: none;
+  font-size: var(--vt-text-lg);
+  transition: background 160ms;
+}
+
+nav a mat-icon {
+  color: var(--vt-muted);
+}
+
+nav a:hover {
+  background: var(--vt-surface-2);
+}
+
+nav a.active {
+  background: var(--vt-accent-soft);
+  color: var(--vt-accent-ink);
+  font-weight: 700;
+}
+
+nav a.active mat-icon {
+  color: var(--vt-accent-ink);
+}
+
+/* Assistant page: no header or menu, centred content, and the status and a way back in a corner. */
+.corner {
+  position: fixed;
+  top: var(--vt-space-4);
+  right: var(--vt-space-6);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--vt-space-3);
+}
+
+.body.focus main {
+  padding-top: var(--vt-space-10);
+}
+
+.body.focus {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.body.focus main {
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  min-width: 0;
+  max-width: 72rem;
+  padding: var(--vt-space-8) var(--vt-space-8) 6rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  nav {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: var(--vt-space-2) var(--vt-space-4);
+    border-right: 0;
+    border-bottom: 1px solid var(--vt-line);
+  }
+
+  nav a {
+    white-space: nowrap;
+    font-size: var(--vt-text-md);
+  }
+
+  main {
+    padding: var(--vt-space-6) var(--vt-space-4) 6rem;
+  }
+
+  .who {
+    display: none;
+  }
+}

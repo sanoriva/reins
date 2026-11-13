@@ -1,0 +1,14 @@
+<form [formGroup]="form()" (ngSubmit)="submitted.emit()">
+  <p class="chosen">
+    @if (form().value.slot) {
+      <strong>{{ form().value.slot }}</strong>
+    } @else {
+      Elige un hueco libre.
+    }
+  </p>
+  <mat-form-field appearance="outline">
+    <mat-label>Motivo de la consulta</mat-label>
+    <textarea matInput formControlName="reason" rows="3"></textarea>
+  </mat-form-field>
+  <button mat-flat-button type="submit" [disabled]="form().invalid">Reservar la cita</button>
+</form>

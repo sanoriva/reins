@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "sanoriva-agent": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["packages/agent-bridge/dist/cli.js", "--stdio"]
+    },
+    "sanoriva-voice": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["packages/agent-voice/dist/cli.js", "--language", "es", "--verbose"]
+    }
+  }
+}

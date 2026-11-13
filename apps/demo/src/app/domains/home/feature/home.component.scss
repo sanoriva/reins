@@ -1,0 +1,34 @@
+.greeting {
+  margin-bottom: var(--vt-space-6);
+}
+h1 {
+  font: 700 var(--vt-text-2xl) / 1.15 var(--vt-font);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.greeting p {
+  color: var(--vt-muted);
+  font-size: var(--vt-text-lg);
+  margin: var(--vt-space-1) 0 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: var(--vt-space-8);
+  align-items: start;
+}
+.main,
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vt-space-8);
+}
+h2 {
+  font-size: var(--vt-text-xl);
+  margin: 0 0 var(--vt-space-3);
+}
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

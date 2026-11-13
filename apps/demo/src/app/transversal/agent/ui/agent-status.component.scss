@@ -1,0 +1,28 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--vt-space-2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: var(--vt-text-sm);
+  background: var(--vt-surface-2);
+  color: var(--vt-muted);
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.ok {
+  background: var(--vt-accent-soft);
+  color: var(--vt-accent-ink);
+}
+.ok .dot {
+  box-shadow: 0 0 0 3px color-mix(in oklab, currentColor 25%, transparent);
+}
+.bad {
+  background: var(--vt-danger-soft);
+  color: var(--vt-danger);
+}

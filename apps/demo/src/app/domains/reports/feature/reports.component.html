@@ -1,0 +1,7 @@
+<vt-page-header title="Mis informes" lead="Consultas, análisis y urgencias. Tu asistente te los puede leer." />
+<mat-chip-listbox aria-label="Tipo de informe" [value]="store.kind()" (change)="store.filterBy($event.value ?? null)">
+  @for (k of store.kinds(); track k.kind) {
+    <mat-chip-option [value]="k.kind">{{ k.label }}</mat-chip-option>
+  }
+</mat-chip-listbox>
+<vt-report-list [reports]="store.visible()" (opened)="open($event)" />

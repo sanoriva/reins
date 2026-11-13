@@ -1,0 +1,10 @@
+<ng-template #pairing>
+  @if (store.pairingCode(); as code) {
+    <vt-pair-dialog [code]="code" />
+  }
+</ng-template>
+<ng-template #confirming>
+  @if (store.pendingConfirmation(); as pending) {
+    <vt-confirm-dialog [pending]="pending" />
+  }
+</ng-template>

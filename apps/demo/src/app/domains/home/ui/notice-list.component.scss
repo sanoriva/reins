@@ -1,0 +1,30 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vt-space-3);
+}
+li {
+  display: flex;
+  gap: var(--vt-space-3);
+  padding: var(--vt-space-4);
+  border-radius: var(--vt-radius);
+  background: var(--vt-surface-2);
+}
+li mat-icon {
+  color: var(--vt-accent-ink);
+  flex: none;
+}
+li.important {
+  background: var(--vt-warn-soft);
+}
+li.important mat-icon {
+  color: var(--vt-warn);
+}
+p {
+  margin: 2px 0 0;
+  color: var(--vt-muted);
+  line-height: 1.5;
+}

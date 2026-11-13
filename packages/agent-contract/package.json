@@ -1,0 +1,34 @@
+{
+  "name": "@reins-ai/contract",
+  "version": "0.1.2",
+  "description": "Protocol between the page and the bridge: zod schemas and types.",
+  "license": "MIT",
+  "author": "Sanoriva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanoriva/reins.git",
+    "directory": "packages/agent-contract"
+  },
+  "homepage": "https://github.com/sanoriva/reins/tree/main/packages/agent-contract#readme",
+  "bugs": {
+    "url": "https://github.com/sanoriva/reins/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test \"__tests__/**/*.test.ts\""
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "files": [
+    "dist"
+  ]
+}

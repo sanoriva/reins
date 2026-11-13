@@ -1,0 +1,12 @@
+.empty {
+  display: flex;
+  align-items: center;
+  gap: var(--vt-space-3);
+  padding: var(--vt-space-5);
+  color: var(--vt-muted);
+  border: 1px dashed var(--vt-line);
+  border-radius: var(--vt-radius);
+}
+p {
+  margin: 0;
+}

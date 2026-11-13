@@ -1,0 +1,40 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--vt-line);
+}
+button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--vt-space-3);
+  align-items: center;
+  padding: var(--vt-space-4) var(--vt-space-2);
+  border: 0;
+  border-bottom: 1px solid var(--vt-line);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 160ms;
+}
+button:hover {
+  background: var(--vt-surface-2);
+}
+span {
+  display: flex;
+  flex-direction: column;
+}
+small {
+  color: var(--vt-muted);
+  font-size: var(--vt-text-sm);
+}
+mat-icon {
+  color: var(--vt-accent-ink);
+}
+.go {
+  color: var(--vt-muted);
+}

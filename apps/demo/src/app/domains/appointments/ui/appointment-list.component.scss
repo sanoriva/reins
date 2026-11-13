@@ -1,0 +1,58 @@
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--vt-line);
+}
+li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: var(--vt-space-4);
+  align-items: center;
+  padding: var(--vt-space-4) 0;
+  border-bottom: 1px solid var(--vt-line);
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  border-radius: var(--vt-radius);
+  background: var(--vt-accent-soft);
+  color: var(--vt-accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.d {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.m {
+  font-size: var(--vt-text-sm);
+}
+.what {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.what strong {
+  font-size: var(--vt-text-lg);
+}
+.where {
+  color: var(--vt-muted);
+}
+.status {
+  font-size: var(--vt-text-sm);
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--vt-muted);
+}
+.status[data-status='confirmada'] {
+  color: var(--vt-accent-ink);
+}
+.muted .date {
+  background: var(--vt-surface-2);
+  color: var(--vt-muted);
+}

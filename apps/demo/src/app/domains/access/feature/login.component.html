@@ -1,0 +1,15 @@
+<div class="narrow">
+  <vt-page-header
+    title="Entrar en Vitalia"
+    lead="Es una demostración: elige con qué paciente entrar. En la versión real entrarías con tu certificado o tu clave."
+  />
+  @if (session.patient(); as patient) {
+    <p>
+      Has entrado como <strong>{{ patient.name }}</strong
+      >.
+    </p>
+    <button mat-stroked-button (click)="signOut()">Salir</button>
+  } @else {
+    <vt-login-card [patients]="session.demoPatients()" (signIn)="signIn($event)" />
+  }
+</div>

@@ -1,0 +1,13 @@
+<!-- A scrollable box WITHOUT data-agent-scroll: the AI cannot scroll it. -->
+<div class="box" aria-label="Pruebas anteriores">
+  <h2>Pruebas anteriores</h2>
+  <ul>
+    @for (t of tests(); track t.date.getTime() + t.name) {
+      <li>
+        <time>{{ t.date | longDate: 'date' }}</time
+        ><span>{{ t.name }}</span
+        ><strong>{{ t.result }}</strong>
+      </li>
+    }
+  </ul>
+</div>

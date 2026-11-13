@@ -1,0 +1,10 @@
+@if (options().length) {
+  <section aria-labelledby="renovar">
+    <h2 id="renovar">Renovar una receta</h2>
+    <p class="lead">Estas recetas terminan en menos de un mes.</p>
+    <vt-renewal-form [form]="form" [options]="options()" (submitted)="renewByHand()" />
+  </section>
+}
+@if (renewed()) {
+  <p class="done" aria-live="polite">Renovación pedida: {{ renewed() }}. Tu médico la revisará.</p>
+}

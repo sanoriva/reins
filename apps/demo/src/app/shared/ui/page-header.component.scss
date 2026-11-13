@@ -1,0 +1,15 @@
+header {
+  margin: 0 0 var(--vt-space-6);
+}
+h1 {
+  font: 700 var(--vt-text-2xl) / 1.15 var(--vt-font);
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+p {
+  font-size: var(--vt-text-lg);
+  color: var(--vt-muted);
+  margin: var(--vt-space-2) 0 0;
+  max-width: 60ch;
+}

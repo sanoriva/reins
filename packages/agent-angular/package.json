@@ -1,0 +1,30 @@
+{
+  "name": "@reins-ai/angular",
+  "version": "0.1.2",
+  "description": "Angular layer for @reins-ai/web: providers, route-based screens, panels and forms the user's AI can drive.",
+  "license": "MIT",
+  "author": "Sanoriva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanoriva/reins.git",
+    "directory": "packages/agent-angular"
+  },
+  "homepage": "https://github.com/sanoriva/reins/tree/main/packages/agent-angular#readme",
+  "bugs": {
+    "url": "https://github.com/sanoriva/reins/issues"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json -c tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/router": "^21.0.0"
+  },
+  "dependencies": {
+    "@reins-ai/web": "0.1.2",
+    "tslib": "^2.3.0"
+  }
+}

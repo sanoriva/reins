@@ -1,0 +1,14 @@
+form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  gap: var(--vt-space-3);
+  align-items: baseline;
+}
+@media (max-width: 960px) {
+  form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  button {
+    justify-self: start;
+  }
+}

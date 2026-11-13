@@ -1,0 +1,9 @@
+@if (options().length) {
+  <section aria-labelledby="anular">
+    <h2 id="anular">Anular una cita</h2>
+    <vt-cancellation-form [form]="form" [options]="options()" (submitted)="cancelByHand()" />
+    @if (cancelled()) {
+      <p class="done" aria-live="polite">Cita anulada: {{ cancelled() }}</p>
+    }
+  </section>
+}

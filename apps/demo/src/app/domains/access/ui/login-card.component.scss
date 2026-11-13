@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vt-space-3);
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--vt-space-4);
+  padding: var(--vt-space-5);
+  border: 1px solid var(--vt-line);
+  border-radius: var(--vt-radius-lg);
+  background: var(--vt-surface);
+}
+div {
+  display: flex;
+  flex-direction: column;
+}
+strong {
+  font-size: var(--vt-text-lg);
+}
+span {
+  color: var(--vt-muted);
+}

@@ -1,0 +1,15 @@
+<div class="box" data-agent-scroll="horarios" aria-label="Horarios y servicios">
+  <h3>{{ center().name }}</h3>
+  <dl>
+    @for (h of center().hours; track h.days) {
+      <dt>{{ h.days }}</dt>
+      <dd>{{ h.open }}</dd>
+    }
+  </dl>
+  <h4>Servicios</h4>
+  <ul>
+    @for (s of center().services; track s) {
+      <li>{{ s }}</li>
+    }
+  </ul>
+</div>
